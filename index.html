@@ -53,22 +53,21 @@
     </style>
 </head>
 <body>
-        <h1>¡Se viene el 14 de febrero y queria saber si lo quieres pasar conmigo?</h1>
-        <p>Mi amor, este es un pequeño recordatorio de lo mucho que te amo mi mamita hermosa. 💖</p>
-        <p>Te invito a pasar un día maravilloso juntos este 14 de febrero.</p>
-        <p class="heart">❤️</p>
+    <h1>¡Se viene el 14 de febrero y quería saber si lo quieres pasar conmigo?</h1>
+    <p>Mi amor, este es un pequeño recordatorio de lo mucho que te amo mi mamita hermosa. 💖</p>
+    <p>Te invito a pasar un día maravilloso juntos este 14 de febrero.</p>
+    <p class="heart">❤️</p>
 
     <p>¿Quieres tener una cita especial conmigo ?:(:</p>
     
     <!-- Agregar imagen -->
     <img src="https://github.com/Gjesus000007/invitacion-san-valentin/blob/main/imagen.JPG?raw=true" alt="Imagen romántica" style="max-width: 100%; height: auto;">
 
-    <!-- Agregar botón de música -->
-    <audio id="music" preload="auto">
+    <!-- Agregar audio con autoplay -->
+    <audio id="music" preload="auto" autoplay>
         <source src="https://raw.githubusercontent.com/Gjesus000007/invitacion-san-valentin/main/musica.mp3" type="audio/mp3">
         Tu navegador no soporta el formato de audio.
     </audio>
-    <button class="option-btn" onclick="playMusic()">Reproducir Música</button>
 
     <!-- Botones de Sí/No -->
     <button class="option-btn" id="yesButton">Sí</button>
@@ -77,16 +76,6 @@
     <div id="response" class="result"></div>
 
     <script>
-        // Función para reproducir o pausar música
-        function playMusic() {
-            var music = document.getElementById("music");
-            if (music.paused) {
-                music.play();
-            } else {
-                music.pause();
-            }
-        }
-
         // Acceder a los botones y la sección para mostrar respuesta
         const yesButton = document.getElementById('yesButton');
         const noButton = document.getElementById('noButton');
@@ -94,13 +83,13 @@
 
         // Función para mostrar una respuesta si se hace clic en "Sí"
         yesButton.onclick = function() {
-            responseDiv.innerHTML = "¡Qué bien! La sorpresa es... ¡un dia con el mas lindo tu giovi jesus jiji! 💕";
+            responseDiv.innerHTML = "¡Qué bien! La sorpresa es... ¡un día con el más lindo tu giovi Jesús jiji! 💕";
             responseDiv.style.color = "#2ecc71"; // Color verde para una respuesta positiva
         };
 
         // Función para mostrar una respuesta si se hace clic en "No"
         noButton.onclick = function() {
-            responseDiv.innerHTML = "¡Lo entiendo! 😔 esta bien era choko.";
+            responseDiv.innerHTML = "¡Lo entiendo! 😔 Está bien, era choko.";
             responseDiv.style.color = "#e74c3c"; // Color rojo para una respuesta negativa
         };
     </script>
