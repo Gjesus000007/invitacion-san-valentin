@@ -29,20 +29,6 @@
             font-size: 4em;
         }
 
-        .btn {
-            padding: 10px 20px;
-            background-color: #d04b66;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-
-        .btn:hover {
-            background-color: #e74c3c;
-        }
-
         .option-btn {
             margin: 20px;
             padding: 15px 30px;
@@ -67,27 +53,40 @@
     </style>
 </head>
 <body>
-    <audio autoplay loop>
-    <source src="https://github.com/Gjesus000007/invitacion-san-valentin/blob/c724e2561934f61043ffd023c6850340acdb458f/musica.mp3" type="audio/mp3">
-    Tu navegador no soporta el formato de audio.
-</audio>
-
         <h1>¡Se viene el 14 de febrero y queria saber si lo quieres pasar conmigo?</h1>
         <p>Mi amor, este es un pequeño recordatorio de lo mucho que te amo mi mamita hermosa. 💖</p>
         <p>Te invito a pasar un día maravilloso juntos este 14 de febrero.</p>
         <p class="heart">❤️</p>
-      <img src="https://www.google.com/imgres?q=te%20amo%20imagen%20hd%20en%20grande&imgurl=https%3A%2F%2Fus.123rf.com%2F450wm%2Fillustraterita%2Fillustraterita1904%2Fillustraterita190400047%2F122098179-tipograf%25C3%25ADa-dibujada-a-mano-letras-te-amo-te-amo-te-amo-en-espa%25C3%25B1ol-letras-decorativas-rom%25C3%25A1nticas.jpg&imgrefurl=https%3A%2F%2Fes.123rf.com%2Fphoto_122098179_tipograf%25C3%25ADa-dibujada-a-mano-letras-te-amo-te-amo-te-amo-en-espa%25C3%25B1ol-letras-decorativas-rom%25C3%25A1nticas.html&docid=-uOaj59-Ck_0XM&tbnid=D32rw1eOSTy7DM&vet=12ahUKEwiR7LGlj62LAxXVrpUCHVsSNMIQM3oECFkQAA..i&w=450&h=300&hcb=2&ved=2ahUKEwiR7LGlj62LAxXVrpUCHVsSNMIQM3oECFkQAA" alt="Imagen romántica" style="max-width: 100%; height: auto;">
-
-
 
     <p>¿Quieres descubrir la sorpresa? Haz tu elección:</p>
     
+    <!-- Agregar imagen -->
+    <img src="https://raw.githubusercontent.com/Gjesus000007/invitacion-san-valentin/main/imagen.jpg" alt="Imagen romántica" style="max-width: 100%; height: auto;">
+
+    <!-- Agregar botón de música -->
+    <audio id="music" preload="auto">
+        <source src="https://raw.githubusercontent.com/Gjesus000007/invitacion-san-valentin/main/musica.mp3" type="audio/mp3">
+        Tu navegador no soporta el formato de audio.
+    </audio>
+    <button class="option-btn" onclick="playMusic()">Reproducir Música</button>
+
+    <!-- Botones de Sí/No -->
     <button class="option-btn" id="yesButton">Sí</button>
     <button class="option-btn" id="noButton">No</button>
 
     <div id="response" class="result"></div>
 
     <script>
+        // Función para reproducir o pausar música
+        function playMusic() {
+            var music = document.getElementById("music");
+            if (music.paused) {
+                music.play();
+            } else {
+                music.pause();
+            }
+        }
+
         // Acceder a los botones y la sección para mostrar respuesta
         const yesButton = document.getElementById('yesButton');
         const noButton = document.getElementById('noButton');
@@ -107,6 +106,3 @@
     </script>
 </body>
 </html>
-
-
-
