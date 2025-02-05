@@ -58,16 +58,19 @@
     <p>Te invito a pasar un día maravilloso juntos este 14 de febrero.</p>
     <p class="heart">❤️</p>
 
-    <p>¿Quieres tener una cita sorpresa conmigo ?:(:</p>
+    <p>¿Quieres tener una cita especial conmigo ?:(:</p>
     
     <!-- Agregar imagen -->
     <img src="https://github.com/Gjesus000007/invitacion-san-valentin/blob/main/imagen.JPG?raw=true" alt="Imagen romántica" style="max-width: 100%; height: auto;">
 
-    <!-- Agregar audio con autoplay -->
-    <audio id="music" preload="auto" autoplay>
+    <!-- Agregar audio sin autoplay -->
+    <audio id="music" preload="auto">
         <source src="https://raw.githubusercontent.com/Gjesus000007/invitacion-san-valentin/main/musica.mp3" type="audio/mp3">
         Tu navegador no soporta el formato de audio.
     </audio>
+
+    <!-- Botón para reproducir música -->
+    <button class="option-btn" onclick="playMusic()">Reproducir Música</button>
 
     <!-- Botones de Sí/No -->
     <button class="option-btn" id="yesButton">Sí</button>
@@ -76,6 +79,12 @@
     <div id="response" class="result"></div>
 
     <script>
+        // Función para reproducir la música
+        function playMusic() {
+            var music = document.getElementById("music");
+            music.play();
+        }
+
         // Acceder a los botones y la sección para mostrar respuesta
         const yesButton = document.getElementById('yesButton');
         const noButton = document.getElementById('noButton');
@@ -83,7 +92,7 @@
 
         // Función para mostrar una respuesta si se hace clic en "Sí"
         yesButton.onclick = function() {
-            responseDiv.innerHTML = "¡Qué bien! La sorpresa es... ¡un día con el más lindo tu giovi Jesús jiji!Te necesito un dia solo para mi💕";
+            responseDiv.innerHTML = "¡Qué bien! La sorpresa es... ¡un día con el más lindo tu giovi Jesús jiji! 💕";
             responseDiv.style.color = "#2ecc71"; // Color verde para una respuesta positiva
         };
 
