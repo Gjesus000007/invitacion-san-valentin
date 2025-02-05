@@ -63,11 +63,11 @@
     <!-- Agregar imagen -->
     <img src="https://github.com/Gjesus000007/invitacion-san-valentin/blob/main/imagen.JPG?raw=true" alt="Imagen romántica" style="max-width: 100%; height: auto;">
 
-    <audio autoplay loop>
-    <source src="https://raw.githubusercontent.com/tu-usuario/invitacion-san-valentin/main/musica.mp3" type="audio/mp3">
-    Tu navegador no soporta el formato de audio.
+    <!-- Agregar botón de música -->
+    <audio id="music" preload="auto">
+        <source src="https://raw.githubusercontent.com/Gjesus000007/invitacion-san-valentin/main/musica.mp3" type="audio/mp3">
+        Tu navegador no soporta el formato de audio.
     </audio>
-
     <button class="option-btn" onclick="playMusic()">Reproducir Música</button>
 
     <!-- Botones de Sí/No -->
@@ -94,13 +94,13 @@
 
         // Función para mostrar una respuesta si se hace clic en "Sí"
         yesButton.onclick = function() {
-            responseDiv.innerHTML = "¡Qué bien! La sorpresa es... ¡una cita especial para nosotros! 💕";
+            responseDiv.innerHTML = "¡Qué bien! La sorpresa es... ¡una cita todo un dia con sopresas por jesus jiji! 💕";
             responseDiv.style.color = "#2ecc71"; // Color verde para una respuesta positiva
         };
 
         // Función para mostrar una respuesta si se hace clic en "No"
         noButton.onclick = function() {
-            responseDiv.innerHTML = "¡Lo entiendo! 😔 Espero que podamos celebrar de alguna otra manera.";
+            responseDiv.innerHTML = "¡Lo entiendo! 😔 esta bien era choko.";
             responseDiv.style.color = "#e74c3c"; // Color rojo para una respuesta negativa
         };
     </script>
