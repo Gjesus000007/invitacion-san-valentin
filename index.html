@@ -43,25 +43,65 @@
             background-color: #e74c3c;
         }
 
-        .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        .option-btn {
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 1.5em;
+            cursor: pointer;
+            border-radius: 10px;
+            border: 2px solid #e74c3c;
+            background-color: transparent;
+            color: #e74c3c;
+        }
+
+        .option-btn:hover {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .result {
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>¡Se viene el 14 de febrero y queria saber si lo quieres pasar conmigo?</h1>
+          <h1>¡Se viene el 14 de febrero y queria saber si lo quieres pasar conmigo?</h1>
         <p>Mi amor, este es un pequeño recordatorio de lo mucho que te amo mi mamita hermosa. 💖</p>
         <p>Te invito a pasar un día maravilloso juntos este 14 de febrero.</p>
         <p class="heart">❤️</p>
         <a href="https://www.ejemplo.com" class="btn">Descubre la sorpresa</a>
-        <img src="https://tu-imagen-aqui.com/imagen.jpg" alt="Imagen romántica" style="max-width: 100%; height: auto;">
+        <img src="https://github.com/Gjesus000007/invitacion-san-valentin/blob/main/1962907f-a4a5-4f8e-a60e-07d68f744184.JPG" alt="Imagen romántica" style="max-width: 100%; height: auto;">
 
-    </div>
+
+    <p>¿Quieres descubrir la sorpresa? Haz tu elección:</p>
+    
+    <button class="option-btn" id="yesButton">Sí</button>
+    <button class="option-btn" id="noButton">No</button>
+
+    <div id="response" class="result"></div>
+
+    <script>
+        // Acceder a los botones y la sección para mostrar respuesta
+        const yesButton = document.getElementById('yesButton');
+        const noButton = document.getElementById('noButton');
+        const responseDiv = document.getElementById('response');
+
+        // Función para mostrar una respuesta si se hace clic en "Sí"
+        yesButton.onclick = function() {
+            responseDiv.innerHTML = "¡Qué bien! La sorpresa es... ¡una cita especial para nosotros! 💕";
+            responseDiv.style.color = "#2ecc71"; // Color verde para una respuesta positiva
+        };
+
+        // Función para mostrar una respuesta si se hace clic en "No"
+        noButton.onclick = function() {
+            responseDiv.innerHTML = "¡Lo entiendo! 😔 Espero que podamos celebrar de alguna otra manera.";
+            responseDiv.style.color = "#e74c3c"; // Color rojo para una respuesta negativa
+        };
+    </script>
 </body>
 </html>
+
 
 
